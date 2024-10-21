@@ -131,9 +131,10 @@ You can run ffmpeg-web with native performance using Electron:
    [download it as a zip](https://github.com/Dinoosauro/ffmpeg-web/archive/refs/heads/main.zip)
    if you don't have git installed)
 2. Make sure to have Node.JS installed. Minimum requirement: Node 20 LTS.
-3. Build the dist folder, so that you'll need to download the resources only
+3. Type in `npm i` for installing dependancies.
+4. Build the dist folder, so that you'll need to download the resources only
    once, by writing `node BuildDist.cjs` in the command line
-4. Finally, write `npm run electron` to open the Electron build. From now on,
+5. Finally, write `npm run electron` to open the Electron build. From now on,
    you'll need to write only this to run ffmpeg-web.
 
 ### Differences between Electron and Web/Docker version:
@@ -157,7 +158,7 @@ After this, you can start the container. The exposed parts are "80" for normal
 HTTP and "443" for HTTPS (see below how to set it up). For example, to open
 ffmpeg-web at `http://localhost:3000`:
 
-`docker run -p 127.0.0.1:3000:80 ffmpeg-web`
+`docker run -p 127.0.0.1:80:3000 ffmpeg-web`
 
 ### Enable HTTPS:
 
